@@ -1,0 +1,148 @@
+---
+---
+<article>
+  <div class="max-w">
+    <div class="container-slides">
+      <ul class="slides">
+        <li class="slide active brand1">
+          <span class="slide-title">HØJSKOLEOPHOLD I UDLANDET</span>
+          <div class="slide-content">
+            <h2>HØJSKOLEOPHOLD I UDLANDET</h2>
+            <p>Når du rejser på højskole i udlandet med HÖJSKOLENDK, bliver du en del af et tæt fællesskab, oplever vilde landskaber og kulturer, rykker dine grænser og vokser som menneske. Du rejser med danske rejseledere og undervisere, der brænder for at skabe trygge, meningsfulde oplevelser – og du får et eventyr, du aldrig glemmer.<br><br>Vi kombinerer højskoleånd, grupperejser, frihed, kulturmøder og inspirerende undervisning for at hjælpe dig med at finde ud af, hvad der virkelig betyder noget for dig – og give dig modet til at gå efter det.<br><br>Gå på opdagelse her på siden og find dit næste store eventyr.</p>
+          </div>
+        </li>
+        <li class="slide brand2">
+          <span class="slide-title">HVAD KAN DU FORVENTE?</span>
+          <div class="slide-content">
+            <h2>HVAD KAN DU FORVENTE?</h2>
+            <p>Når du rejser med HÖJSKOLENDK, får du mere end bare undervisning. Du oplever verden på en ny måde, møder spændende kulturer og får uforglemmelige naturoplevelser.<br>Du kan forvente:
+			<br><br><b>Teambuilding og personlig udvikling:</b><br>Venskaber og fællesskab, mens du lærer om samarbejde og kulturforståelse.
+			<br><br><b>Frivilligt arbejde:</b><br>Gør en forskel og få en unik indsigt i lokale samfund.
+			<br><br><b>Friuger:</b><br>Tid til at udforske landet og tage på eventyr med dine nye venner.<br>Spændende kulturoplevelser: Fra hindu-templer i Indien til surf-kultur på Hawaii.<br>Vilde naturoplevelser: Snorkling, river rafting, trekking og safariture i verdens smukkeste landskaber.<br><br>Din rejse bliver et eventyr, du aldrig vil glemme.</p>          </div>
+        </li>
+        <li class="slide brand3">
+          <span class="slide-title">FAG & UNDERVISNING</span>
+          <div class="slide-content">
+            <h2>FAG & UNDERVISNING</h2>
+            <p>Glem alt om kedelige klasselokaler og tør tavleundervisning – for vi brænder for at inspirere vores elever. Du skal derfor glæde dig til aktiv, inddragende, tankevækkende og levende undervisning, der leveres af topengagerede, inspirerende, dygtige og danske undervisere. Altid.<br><br>Med masser af praktiske øvelser, spændende udfordringer og en legende og undersøgende tilgang involverer vi dig, så vores elever er en aktiv del af undervisningen. Det er ikke en forudsætning, at du har kendskab til nogen af fagene. Der er ingen pensum, prøver eller eksaminer, og du får et kursusbevis efter højskoleopholdet, såfremt du har deltaget aktivt i undervisningen.<br><br>Det er vigtigt for os, at din undervisning er spændende, relevant og at du lærer på en aktiv og sjov måde. Vi tror på, at man nemmere kan engagere sig, når man er involveret og ikke sidder ned hele dagen og bare skal lytte. Derfor tager vi bl.a. afsæt i nedenstående praktiske og teoretiske fundament.</p>
+          </div>
+        </li>
+        <li class="slide brand4">
+          <span class="slide-title">BUDGET & PRISER</span>
+          <div class="slide-content">
+            <h2>BUDGET & PRISER</h2>
+          </div>
+        </li>
+        <li class="slide brand5">
+          <span class="slide-title">FLERE SPØRGSMÅL</span>
+          <div class="slide-content">
+            <h2>FLERE SPØRGSMÅL</h2>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</article>
+
+<style>
+    * {
+      box-sizing: border-box;
+    }
+
+    h2 {
+      font-family: var(--font-heading);
+      font-size: var(--text-heading_xl);
+      padding-bottom: 24px;    
+    }
+
+    .slides {
+      width: 100%;
+      display: flex;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    .slide {
+      list-style-type: none;
+      height: 700px;
+      width: 5%;
+      overflow: hidden;
+      transition: all 500ms ease;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .slide.active {
+      width: 80%;
+    }
+
+    .slide-title {
+      font-weight: bold;
+      font-family: var(--font-heading);
+      font-size: var(--text-heading_s);
+      transform: rotate(270deg);
+      position: absolute;
+      top: 60%;
+      width: 400px;
+      left: -150%;
+      height: 100px;
+      pointer-events: none;
+    }
+
+    /* Vis altid title */
+    .slide .slide-title {
+      display: block;
+    }
+
+    /* Skjul indhold som standard */
+    .slide-content {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.4s ease;
+      width: 100%;
+      max-width: 915px;
+      padding: 40px;
+      color: black;
+    }
+
+    /* Vis kun aktiv slides indhold */
+    .slide.active .slide-content {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .brand1 {
+      background-color: #e5efdc;
+    }
+
+    .brand2 {
+      background-color: #f5fbff;
+    }
+
+    .brand3 {
+      background-color: #ffdecc;
+    }
+
+    .brand4 {
+      background-color: #cbdfb9;
+    }
+
+    .brand5 {
+      background-color: #cce9ff;
+    }
+  </style>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const slides = document.querySelectorAll(".slide");
+
+    slides.forEach(slide => {
+      slide.addEventListener("click", function () {
+        slides.forEach(s => s.classList.remove("active"));
+        slide.classList.add("active");
+      });
+    });
+  });
+</script>

@@ -1,6 +1,7 @@
 ---
+import Button from '../components/Button.astro';
 ---
-<div class="navbar bg-base-100 shadow-sm px-6 py-4">
+<div class="navbar bg-teritary/60 text-blue_600 text-body_md font-body font-bold shadow-sm px-6 py-4">
     <div class="navbar-start">
         <div class="dropdown">
             <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -13,8 +14,8 @@
                 <li>
                     <a>Parent</a>
                     <ul class="p-2">
-                        <li><a>Submenu 1</a></li>
-                        <li><a>Submenu 2</a></li>
+                        <li><a>MALDIVERNE - SRI LANKA - JAPAN - AUSTRALIEN - BALI - GILI ISLANDS</a></li>
+                        <li><a>INDIEN - NEPAL - THAILAND - VIETNAM - SRI LANKA</a></li>
                     </ul>
                 </li>
                 <li><a>Item 3</a></li>
@@ -24,21 +25,21 @@
                         <img src="/logo.svg" alt="Menu" class="h-full w-50 object-contain" />
                 </a>
         </div>
-    <div class="navbar-center hidden lg:flex"></div>
+<div class="navbar-center hidden lg:flex"></div>
     <div class="navbar-end">
         <ul class="menu menu-horizontal px-1">
             <li>
                 <details>
-                    <summary>Destinationer</summary>
+                    <summary>DESTINATIONER</summary>
                     <ul class="p-2">
-                        <li><a>Submenu 1</a></li>
-                        <li><a>Submenu 2</a></li>
+                        <li><a>MALDIVERNE - SRI LANKA - JAPAN - AUSTRALIEN - BALI - GILI ISLANDS</a></li>
+                        <li><a>INDIEN - NEPAL - THAILAND - VIETNAM - SRI LANKA</a></li>
                     </ul>
                 </details>
             </li>
-            <li><a>Information</a></li>
-            <li><a>Om os</a></li>
+            <li><a>INFORMATION</a></li>
+            <li><a>OM OS</a></li>
         </ul>
-        <a class="btn">Button</a>
+        <Button variant="primary" size="small">Tilmeld</Button>  
     </div>
 </div>

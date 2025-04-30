@@ -6,8 +6,31 @@
 @plugin "daisyui";
 
 @theme {
-  /* Her tilføjes theme variable // tokens */
+  --color-orange: #ff5900;
+  --color-orange_100: #ffdecc;
+  --color-orange_300: #ff9c66;
+  --color-blue: #c2e5ff;
+  --color-blue_600: #66bdff;
+  --color-alarm: #7baa4f;
+  --color-teritary: #fff7ec;
+
+  --font-display: "Lilita One";
+  --font-heading: "Brevia";
+  --font-body: "Hanken Grotesk", sans-serif;
+
+  --text-display: 100px;
+  --text-display_mobile: 50px;
+  --text-heading_xl: 48px;
+  --text-heading_lg: 36px;
+  --text-heading_s: 24px;
+  --text-heading_xs: 20px;
+  --text-body_xl: 20px;
+  --text-body_md: 16px;
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://use.typekit.net/amg8qvj.css");
 
 @layer base {
   *,
@@ -16,6 +39,86 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    font-weight: bold;
+  }
+
+  p {
+    font-family: var(--font-body), sans-serif;
+  }
+
+  /* Horizontal accordion */
+  .slides {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  .slide {
+    list-style-type: none;
+    height: 700px;
+    width: 5%;
+    overflow: hidden;
+    transition: all 500ms linear;
+    position: relative;
+    cursor: pointer;
+  }
+
+  /* Slide becomes wider when active */
+  .slide.active {
+    width: 80%;
+  }
+
+  /* Slide content */
+  .slide-content {
+    display: block;
+    width: 720px;
+    padding: 40px;
+    color: black;
+  }
+
+  /* Title label shown when collapsed */
+  .slide-title {
+    font-weight: 600;
+    color: #black;
+    transform: rotate(270deg);
+    position: absolute;
+    top: 10%;
+    width: 140px;
+    left: -30%;
+    height: 100px;
+    pointer-events: none;
+  }
+
+  /* Hide title when active */
+  .slide.active .slide-title {
+    display: none;
+  }
+
+  /* Brand colors */
+  .brand1 {
+    background-color: #e5efdc;
+  }
+  .brand2 {
+    background-color: #f5fbff;
+  }
+  .brand3 {
+    background-color: #ffdecc;
+  }
+  .brand4 {
+    background-color: #cbdfb9;
+  }
+  .brand5 {
+    background-color: #cce9ff;
   }
 }
 

@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
+import Accordion from '../components/Accordion.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 ---
@@ -9,95 +10,122 @@ import { Image } from 'astro:assets';
 		<div class="hero min-h-screen" style="background-image: url(/hero2.webp);">
 			<div class="hero-overlay"></div>
 			<div class="hero-content text-neutral-content text-center">
-				<div class="max-w-md">
-					<h1 class="mb-5 text-5xl font-bold">HÖJSKOLENDK</h1>
-					<p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-					<button class="btn btn-primary">Get Started</button>
+				<div class="max-w-5xl ">
+					<h1 class="mb-5 font-display text-display_mobile md:text-display text-teritary">HÖJSKOLENDK</h1>
+					<p class="mb-5 text-teritary font-bold font-heading text-heading_s">Drømmer du om eventyr, fællesskab og oplevelser for livet?<br>Tag på et eventyrligt og uforglemmeligt højskoleophold i udlandet for unge</p>
+      				<Button variant="primary" size="small">Tilmeld dig</Button>  
 				</div>
 			</div>
 		</div>
 	</article>
 
-	<article class="pl-16 pb-20">
-		<h2>Lorem ipsum dolar</h2>
-		<div class="grid grid-cols-2 gap-25">
+	<article class="pl-4 md:pl-16 pb-20">
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-25">
 			<div>
-				<p class="pb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					<button class="btn btn-primary">Get Started</button>
-					<button class="btn btn-primary">Get Started</button>
+				<h2 class="text-heading_l md:text-heading_xl">Er du klar til dit livs eventyr?</h2>
+				<p class="pb-4 md:pb-8">Hos HÖJSKOLENDK kombinerer vi højskoleliv og fællesskab med rejser til udlandet. Vi er for unge mellem 18 og 30 år, der drømmer om mere end en almindelig ferie – og som vil opleve verden sammen med andre. Du får nye venskaber, meningsfuld undervisning og møder med kulturer, der sætter spor. Vi rejser med åbne øjne og åbent sind – og du er i trygge hænder hele vejen, for vi er medlem af Rejsegarantifonden.</p>
+				<p class="font-bold pb-6 md:pb-11">Er du klar til at tage af sted? Vi glæder os til at møde dig.</p>
+					<div class="flex flex-col md:flex-row gap-4">
+						<Button variant="primary" size="small">Tilmeld dig</Button>  
+						<Button variant="secondary" size="small">Sign up</Button>  
+					</div>
 			</div>
 			<img src="/group.webp" alt="gruppe af unge mennekser på sten" class="aspect-16/9 object-cover">
 		</div>
 	</article>
 
 
-<article>
-  <div class="carousel carousel-center ">
+<article class="pb-20">
+	<div class="carousel carousel-center">
 		<div class="carousel-item flex flex-col items-center">
-      		<div class="bg-orange-500 text-white w-full p-2">
-        		MALDIVERNE - SRI LANKA - JAPAN -<br>AUSTRALIEN - BALI - GILI ISLANDS
-      		</div>
-      		<img src=/carousel1.webp alt="Maldiverne" class="object-cover w-xs h-96" />
-    	</div>
-
-    	<div class="carousel-item flex flex-col items-center">
-    		<img src=/carousel2.webp alt="Maldiverne" class="object-cover w-xs h-96" />
-      		<div class="bg-blue-300 text-white w-full p-2">
-				INDIEN - NEPAL - THAILAND -<br>VIETNAM - SRI LANKA
-      		</div>
-    	</div>
-
-		<div class="carousel-item flex flex-col items-center">
-      		<div class="bg-orange-500 text-white w-full p-2">
-				BRASILIEN - COLOMBIA -<br>COSTA RICA - MEXICO      		
+			<div class="bg-orange text-white w-full p-2 text-center">
+				<p class="font-heading font-bold text-sm md:text-base lg:text-lg">MALDIVERNE - SRI LANKA - JAPAN -<br>AUSTRALIEN - BALI - GILI ISLANDS</p>
 			</div>
-      		<img src=/carousel3.webp alt="Maldiverne" class="object-cover w-xs h-96" />
-    	</div>
-
-    	<div class="carousel-item flex flex-col items-center">
-    		<img src=/carousel4.webp alt="Maldiverne" class="object-cover w-xs h-96" />
-      		<div class="bg-blue-300 text-white w-full p-2">
-        		AUSTRALIEN - NEW ZEALAND - VIETNAM<br>BALI - GILI ISLANDS - LOMBOK
-      		</div>
-    	</div>
+			<img src="/carousel1.webp" alt="Maldiverne" class="object-cover w-full h-64 md:h-80 lg:h-96" />
+		</div>
 
 		<div class="carousel-item flex flex-col items-center">
-      		<div class="bg-orange-500 text-white w-full p-2">
-        		HAWAII - AUSTRALIEN -<br>JAPAN - BALI - GILI ISLANDS
-      		</div>
-      		<img src=/carousel5.webp alt="Maldiverne" class="object-cover w-xs h-96" />
-    	</div>
-
-    	<div class="carousel-item flex flex-col items-center">
-    		<img src=/carousel6.webp alt="Maldiverne" class="object-cover w-xs h-96" />
-      		<div class="bg-blue-300 text-white w-full p-2">
-        		MALDIVERNE - SRI LANKA -<br>BALI - GILI ISLANDS
-      		</div>
-    	</div>
+			<img src="/carousel2.webp" alt="Maldiverne" class="object-cover w-full h-64 md:h-80 lg:h-96" />
+			<div class="bg-blue text-white w-full p-2 text-center">
+				<p class="font-heading font-bold text-sm md:text-base lg:text-lg">INDIEN - NEPAL - THAILAND -<br>VIETNAM - SRI LANKA</p>
+			</div>
+		</div>
 
 		<div class="carousel-item flex flex-col items-center">
-      		<div class="bg-orange-500 text-white w-full p-2">
-        		BRASILIEN - BOLIVIA - COLOMBIA -<br>ECUADOR - PERU - ARGENTINA
-      		</div>
-      		<img src=/carousel7.webp alt="Maldiverne" class="object-cover w-xs h-96" />
-    	</div>
+			<div class="bg-alarm text-white w-full p-2 text-center">
+				<p class="font-heading font-bold text-sm md:text-base lg:text-lg">BRASILIEN - COLOMBIA -<br>COSTA RICA - MEXICO</p>
+			</div>
+			<img src="/carousel3.webp" alt="Maldiverne" class="object-cover w-full h-64 md:h-80 lg:h-96" />
+		</div>
 
-    	<div class="carousel-item flex flex-col items-center">
-    		<img src=/carousel8.webp alt="Maldiverne" class="object-cover w-xs h-96" />
-      		<div class="bg-blue-300 text-white w-full p-2">
-        		AUSTRALIEN - JAPAN -<br>BALI - GILI ISLANDS
-      		</div>
-    	</div>
-  </div>
+		<div class="carousel-item flex flex-col items-center">
+			<img src="/carousel4.webp" alt="Maldiverne" class="object-cover w-full h-64 md:h-80 lg:h-96" />
+			<div class="bg-orange text-white w-full p-2 text-center">
+				<p class="font-heading font-bold text-sm md:text-base lg:text-lg">AUSTRALIEN - ZEALAND - VIETNAM<br>BALI - GILI ISLANDS - LOMBOK</p>
+			</div>
+		</div>
+
+		<div class="carousel-item flex flex-col items-center">
+			<div class="bg-blue text-white w-full p-2 text-center">
+				<p class="font-heading font-bold text-sm md:text-base lg:text-lg">HAWAII - AUSTRALIEN -<br>JAPAN - BALI - GILI ISLANDS</p>
+			</div>
+			<img src="/carousel5.webp" alt="Maldiverne" class="object-cover w-full h-64 md:h-80 lg:h-96" />
+		</div>
+
+		<div class="carousel-item flex flex-col items-center">
+			<img src="/carousel6.webp" alt="Maldiverne" class="object-cover w-full h-64 md:h-80 lg:h-96" />
+			<div class="bg-alarm text-white w-full p-2 text-center">
+				<p class="font-heading font-bold text-sm md:text-base lg:text-lg">MALDIVERNE - SRI LANKA -<br>BALI - GILI ISLANDS</p>
+			</div>
+		</div>
+
+		<div class="carousel-item flex flex-col items-center">
+			<div class="bg-orange text-white w-full p-2 text-center">
+				<p class="font-heading font-bold text-sm md:text-base lg:text-lg">BRASILIEN - BOLIVIA - COLOMBIA -<br>ECUADOR - PERU - ARGENTINA</p>
+			</div>
+			<img src="/carousel7.webp" alt="Maldiverne" class="object-cover w-full h-64 md:h-80 lg:h-96" />
+		</div>
+
+		<div class="carousel-item flex flex-col items-center">
+			<img src="/carousel8.webp" alt="Maldiverne" class="object-cover w-full h-64 md:h-80 lg:h-96" />
+			<div class="bg-blue text-white w-full p-2 text-center">
+				<p class="font-heading font-bold text-sm md:text-base lg:text-lg">AUSTRALIEN - JAPAN -<br>BALI - GILI ISLANDS</p>
+			</div>
+		</div>
+	</div>
 </article>
 
-<article>
-	<img src="" alt="">
-	<h3>Den bedste beslutning jeg nogensinde har taget. Kæmpe stor anbefaling!!</h3>
-	<img src="" alt="">
-	<p>Jakob skjold</p>
+<article class="pb-20">
+	<div class="flex items-center justify-center px-4 pb-20">
+		<div class="text-orange max-w-7xl w-full px-6 py-8 grid grid-rows-[auto_1fr_auto] gap-4">
+			<img src="/tegn.png" alt="citationstegn" class="w-6 h-5">
+			<h3 class="text-2xl md:text-3xl font-bold leading-snug">Den bedste beslutning jeg nogensinde har taget. Kæmpe stor anbefaling!!</h3>
+				<div class="justify-self-end text-right">
+					<img src="/tegn2.png" alt="citationstegn" class="w-6 h-5 inline-block mb-1" />
+					<p class="text-sm md:text-base">Jakob skjold</p>
+				</div>
+		</div>
+	</div>
 </article>
 
+<article class="pb-20">
+	<div class="grid grid-cols-1 md:grid-cols-2 min-h-screen">
+		<div class="h-[710px] md:h-auto">
+			<img src="/picture3_1.png" alt="vandfald med folk" class="w-full h-full object-cover" />
+		</div>
+		<div class="relative h-[710px] md:h-auto">
+			<img src="/picture4.png" alt="vandregruppe" class="w-full h-full object-cover" />
+			<div class="absolute bottom-0 left-0 w-full bg-[#fffaf5] px-16 py-10 md:px-16 md:py-10">
+				<h2 class="text-2xl md:text-4xl font-bold leading-snug mb-4">Rejsen starter her – <br />kom til infomøde</h2>
+				<p class="text-base md:text-lg text-[#260530] mb-6">Vil du høre mere om livet som højskoleelev i udlandet? Kom til infomøde i København, Aarhus – eller online. Vi fortæller om rejserne, fællesskabet og alt det, du har i vente.</p>
+					<div class="text-right">
+						<Button variant="primary" size="small">Tilmeld dig</Button>  
+					</div>
+			</div>
+		</div>
+	</div>
+</article>
 
+<Accordion></Accordion>
 
 </MainLayout>
