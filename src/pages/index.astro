@@ -2,10 +2,9 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
 import Accordion from '../components/Accordion.astro';
-import Link from '../components/Link.astro';
-import { Image } from 'astro:assets';
 ---
 <MainLayout title="Forside">
+<!-- start på hero -->
 	<article class="pb-20">
 		<div class="hero min-h-screen" style="background-image: url(/hero2.webp);">
 			<div class="hero-overlay"></div>
@@ -18,7 +17,9 @@ import { Image } from 'astro:assets';
 			</div>
 		</div>
 	</article>
+<!-- slut på hero -->
 
+<!-- start på tilmeld card -->
 	<article class="pl-4 md:pl-16 pb-20">
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-25">
 			<div>
@@ -33,67 +34,71 @@ import { Image } from 'astro:assets';
 			<img src="/group.webp" alt="gruppe af unge mennekser på sten" class="aspect-16/9 object-cover">
 		</div>
 	</article>
+<!-- slut på tilmeld card -->
 
-<article class="pb-20">
-	<div class="carousel carousel-center">
-		<div class="carousel-item flex flex-col items-center">
-			<div class="bg-orange text-white w-full p-2 text-center">
-				<p class="font-heading font-bold text-sm md:text-base lg:text-lg">MALDIVERNE - SRI LANKA - JAPAN -<br>AUSTRALIEN - BALI - GILI ISLANDS</p>
+<!-- start på carousel -->
+	<article class="pb-20">
+		<div class="carousel carousel-center">
+			<div class="carousel-item flex flex-col items-center">
+				<div class="bg-orange text-white w-full p-2 text-center">
+					<p class="font-heading font-bold text-sm md:text-base lg:text-lg">MALDIVERNE - SRI LANKA - JAPAN -<br>AUSTRALIEN - BALI - GILI ISLANDS</p>
+				</div>
+				<img src="/carousel1.webp" alt="Maldiverne" class="object-cover w-full h-64 md:h-80 lg:h-96" />
 			</div>
-			<img src="/carousel1.webp" alt="Maldiverne" class="object-cover w-full h-64 md:h-80 lg:h-96" />
-		</div>
 
-		<div class="carousel-item flex flex-col items-center">
-			<img src="/carousel2.webp" alt="Maldiverne" class="object-cover w-full h-64 md:h-80 lg:h-96" />
-			<div class="bg-blue text-white w-full p-2 text-center">
-				<p class="font-heading font-bold text-sm md:text-base lg:text-lg">INDIEN - NEPAL - THAILAND -<br>VIETNAM - SRI LANKA</p>
+			<div class="carousel-item flex flex-col items-center">
+				<img src="/carousel2.webp" alt="Maldiverne" class="object-cover w-full h-64 md:h-80 lg:h-96" />
+				<div class="bg-blue text-white w-full p-2 text-center">
+					<p class="font-heading font-bold text-sm md:text-base lg:text-lg">INDIEN - NEPAL - THAILAND -<br>VIETNAM - SRI LANKA</p>
+				</div>
+			</div>
+
+			<div class="carousel-item flex flex-col items-center">
+				<div class="bg-alarm text-white w-full p-2 text-center">
+					<p class="font-heading font-bold text-sm md:text-base lg:text-lg">BRASILIEN - COLOMBIA -<br>COSTA RICA - MEXICO</p>
+				</div>
+				<img src="/carousel3.webp" alt="Maldiverne" class="object-cover w-full h-64 md:h-80 lg:h-96" />
+			</div>
+
+			<div class="carousel-item flex flex-col items-center">
+				<img src="/carousel4.webp" alt="Maldiverne" class="object-cover w-full h-64 md:h-80 lg:h-96" />
+				<div class="bg-orange text-white w-full p-2 text-center">
+					<p class="font-heading font-bold text-sm md:text-base lg:text-lg">AUSTRALIEN - ZEALAND - VIETNAM<br>BALI - GILI ISLANDS - LOMBOK</p>
+				</div>
+			</div>
+
+			<div class="carousel-item flex flex-col items-center">
+				<div class="bg-blue text-white w-full p-2 text-center">
+					<p class="font-heading font-bold text-sm md:text-base lg:text-lg">HAWAII - AUSTRALIEN -<br>JAPAN - BALI - GILI ISLANDS</p>
+				</div>
+				<img src="/carousel5.webp" alt="Maldiverne" class="object-cover w-full h-64 md:h-80 lg:h-96" />
+			</div>
+
+			<div class="carousel-item flex flex-col items-center">
+				<img src="/carousel6.webp" alt="Maldiverne" class="object-cover w-full h-64 md:h-80 lg:h-96" />
+				<div class="bg-alarm text-white w-full p-2 text-center">
+					<p class="font-heading font-bold text-sm md:text-base lg:text-lg">MALDIVERNE - SRI LANKA -<br>BALI - GILI ISLANDS</p>
+				</div>
+			</div>
+
+			<div class="carousel-item flex flex-col items-center">
+				<div class="bg-orange text-white w-full p-2 text-center">
+					<p class="font-heading font-bold text-sm md:text-base lg:text-lg">BRASILIEN - BOLIVIA - COLOMBIA -<br>ECUADOR - PERU - ARGENTINA</p>
+				</div>
+				<img src="/carousel7.webp" alt="Maldiverne" class="object-cover w-full h-64 md:h-80 lg:h-96" />
+			</div>
+
+			<div class="carousel-item flex flex-col items-center">
+				<img src="/carousel8.webp" alt="Maldiverne" class="object-cover w-full h-64 md:h-80 lg:h-96" />
+				<div class="bg-blue text-white w-full p-2 text-center">
+					<p class="font-heading font-bold text-sm md:text-base lg:text-lg">AUSTRALIEN - JAPAN -<br>BALI - GILI ISLANDS</p>
+				</div>
 			</div>
 		</div>
+	</article>
+<!-- slut på carousel -->
 
-		<div class="carousel-item flex flex-col items-center">
-			<div class="bg-alarm text-white w-full p-2 text-center">
-				<p class="font-heading font-bold text-sm md:text-base lg:text-lg">BRASILIEN - COLOMBIA -<br>COSTA RICA - MEXICO</p>
-			</div>
-			<img src="/carousel3.webp" alt="Maldiverne" class="object-cover w-full h-64 md:h-80 lg:h-96" />
-		</div>
-
-		<div class="carousel-item flex flex-col items-center">
-			<img src="/carousel4.webp" alt="Maldiverne" class="object-cover w-full h-64 md:h-80 lg:h-96" />
-			<div class="bg-orange text-white w-full p-2 text-center">
-				<p class="font-heading font-bold text-sm md:text-base lg:text-lg">AUSTRALIEN - ZEALAND - VIETNAM<br>BALI - GILI ISLANDS - LOMBOK</p>
-			</div>
-		</div>
-
-		<div class="carousel-item flex flex-col items-center">
-			<div class="bg-blue text-white w-full p-2 text-center">
-				<p class="font-heading font-bold text-sm md:text-base lg:text-lg">HAWAII - AUSTRALIEN -<br>JAPAN - BALI - GILI ISLANDS</p>
-			</div>
-			<img src="/carousel5.webp" alt="Maldiverne" class="object-cover w-full h-64 md:h-80 lg:h-96" />
-		</div>
-
-		<div class="carousel-item flex flex-col items-center">
-			<img src="/carousel6.webp" alt="Maldiverne" class="object-cover w-full h-64 md:h-80 lg:h-96" />
-			<div class="bg-alarm text-white w-full p-2 text-center">
-				<p class="font-heading font-bold text-sm md:text-base lg:text-lg">MALDIVERNE - SRI LANKA -<br>BALI - GILI ISLANDS</p>
-			</div>
-		</div>
-
-		<div class="carousel-item flex flex-col items-center">
-			<div class="bg-orange text-white w-full p-2 text-center">
-				<p class="font-heading font-bold text-sm md:text-base lg:text-lg">BRASILIEN - BOLIVIA - COLOMBIA -<br>ECUADOR - PERU - ARGENTINA</p>
-			</div>
-			<img src="/carousel7.webp" alt="Maldiverne" class="object-cover w-full h-64 md:h-80 lg:h-96" />
-		</div>
-
-		<div class="carousel-item flex flex-col items-center">
-			<img src="/carousel8.webp" alt="Maldiverne" class="object-cover w-full h-64 md:h-80 lg:h-96" />
-			<div class="bg-blue text-white w-full p-2 text-center">
-				<p class="font-heading font-bold text-sm md:text-base lg:text-lg">AUSTRALIEN - JAPAN -<br>BALI - GILI ISLANDS</p>
-			</div>
-		</div>
-	</div>
-</article>
-
+<!-- start på citat -->
 <article class="pb-20">
 	<div class="flex items-center justify-center px-4 pb-20">
 		<div class="text-orange max-w-7xl w-full px-6 py-8 grid grid-rows-[auto_1fr_auto] gap-4">
@@ -106,7 +111,9 @@ import { Image } from 'astro:assets';
 		</div>
 	</div>
 </article>
+<!-- slut på citat -->
 
+<!-- start på infomøde card -->
 <article class="pb-20">
 	<div class="grid grid-cols-1 md:grid-cols-2 min-h-screen">
 		<div class="h-[710px] md:h-auto">
@@ -124,6 +131,7 @@ import { Image } from 'astro:assets';
 		</div>
 	</div>
 </article>
+<!-- slut på infomøde card -->
 
 <Accordion></Accordion>
 

@@ -1,0 +1,42 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from '../components/Button.astro';
+import Accordion from '../components/Accordion.astro';
+---
+<MainLayout title="KOMPONENT BIBLIOTEK">
+<h1 class="px-8 pb-20 font-display text-display_mobile md:text-display text-orange">KOMPONENT BIBLIOTEK</h1>
+
+<!-- start på buttons -->
+<section class="container pb-20 mx-auto m-sectiontop px-4">
+    <h2 class="text-heading_l text-blue-600 md:text-heading_xl">Buttons</h2>
+    <p class="pb-4"><Button variant="primary">Variant primary</Button></p>
+    <p class="pb-4"><Button variant="primary" size="small">Variant primary size small</Button></p>
+    <p class="pb-4"><Button variant="primary" size="medium">Variant primary size medium</Button></p>
+    <p class="pb-4"><Button variant="primary" size="large">Variant primary size large</Button></p>
+    <p class="pb-4"><Button variant="secondary" size="small">Variant secondary size small</Button></p>
+    <p class="pb-4"><Button variant="secondary" size="medium">Variant secondary size medium</Button></p>
+    <p class="pb-4"><Button variant="secondary" size="large">Variant secondary size large</Button></p>
+</section>
+<!-- slut på buttons -->
+
+<!-- start på card -->
+<section class="container pb-20 mx-auto m-sectiontop px-4">
+    <h2 class="text-heading_l text-blue-600 md:text-heading_xl">Card</h2>
+    <div class="grid grid-cols-2 md:grid-gols-3 lg:grid-cols-4 gap-4">
+		<div class="carousel-item flex flex-col items-center">
+			<div class="bg-orange text-white w-full p-2 text-center">
+				<p class="font-heading font-bold text-sm md:text-base lg:text-lg">MALDIVERNE - SRI LANKA - JAPAN -<br>AUSTRALIEN - BALI - GILI ISLANDS</p>
+			</div>
+			<img src="/carousel1.webp" alt="Maldiverne" class="object-cover w-full h-64 md:h-80 lg:h-96" />
+		</div>
+    </div>
+</section>
+<!-- slut på card -->
+
+<!--start på accordion -->
+<section class="container pb-20 mx-auto m-sectiontop px-4">
+    <h2 class="text-heading_l text-blue-600 md:text-heading_xl">Accordion</h2>
+    <Accordion></Accordion>
+</section>
+
+</MainLayout>
